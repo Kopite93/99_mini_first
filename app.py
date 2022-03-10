@@ -3,14 +3,10 @@ import hashlib
 from flask import *
 from pymongo import MongoClient
 from datetime import datetime, timedelta
-import requests
-from bs4 import BeautifulSoup
-
-import dbconfig
 
 app = Flask(__name__)
 
-client = MongoClient(dbconfig.MONGODB_SETTING.values())
+client = MongoClient('mongodb+srv://sparta:sparta@cluster0.jclgm.mongodb.net/Cluster0?retryWrites=true&w=majority')
 db = client.test
 
 SECRET_KEY = "PricEat"
@@ -45,7 +41,7 @@ def sign_in():
          'id': username_receive,
          'exp': datetime.utcnow() + timedelta(seconds=60 * 60 * 24)  # 로그인 24시간 유지
         }
-        token = jwt.encode(payload, SECRET_KEY, algorithm='HS256')
+        token = jwt.encode(payload, SECRET_KEY, algorithm='HS256').decode('utf-8')
 
         return jsonify({'result': 'success', 'token': token})
     # 찾지 못하면

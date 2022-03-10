@@ -1,62 +1,43 @@
-$(document).ready(function () {
-  show_store();
-});
-function show_store() {
-  $.ajax({
-    type: "GET",
-    url: "/store",
-    data: {},
-    success: function (response) {
-      console.log(response);
-      let rows = response["stores_list"];
-      for (let i = 0; i < rows.length; i++) {
-        let name = rows[i]["name"];
-        let address = rows[i]["address"];
-        let store_img = rows[i]["img"];
-        let temp_html = `<div class="desc_list" onclick="location.href='/store_desc?name=${name}'">
-                          <div class="store_img" style="background-image: url(${store_img});">
-                          </div>
-                          <div class="store_name">
-                            ${name}
-                          </div>
-                        </div>`;
-        $("#list_box").append(temp_html);
-      }
-    },
-  });
-}
-function getInputValue() {
-  $("#list_box").empty();
-  let area = $("#area").val();
-  let price = $("#price").val();
-  localStorage.setItem("key", price);
-  if (area === "") {
-    alert("현재 위치를 입력해주세요");
-  } else {
-    if (price === "") {
-      alert("원하시는 가격을 입력해주세요");
-    } else {
-      $.ajax({
-        type: "POST",
-        url: "/search",
-        data: { guname_give: area, price_give: price },
-        success: function (response) {
-          let rows = response["final_list"];
-          for (let key in rows) {
-            let name = key;
-            let url = rows[key];
-            console.log(key);
-            let temp_html = `<div class="desc_list" onclick="location.href='/store_desc?name=${name}'">
-                            <div class="store_img" style="background-image: url('${url}');">
-                            </div>
-                            <div class="store_name">
-                            ${name}
-                            </div>
-                          </div>`;
-            $("#list_box").append(temp_html);
-          }
-        },
-      });
-    }
-  }
-}
+// function show_detail() {
+//   $.ajax({
+//     type: "GET",
+//     url: "/store",
+//     data: {},
+//     success: function (response) {
+//       let rows = response["stores_list"];
+//       for (let i = 0; i < rows.length; i++) {
+//         if (rows[i]["name"] === name) {
+//           let name = rows[i]["name"];
+//           let address = rows[i]["address"];
+//           let store_img = rows[i]["img"];
+//           let menu = rows[i]["menu"];
+
+//           let temp_html = `<div class="main-list">
+//                             <div class="img"
+//                               style="background-image: url('${store_img}');">
+//                             </div>
+//                             <div class="restaurant-menu">
+//                               <div class="detail-info">
+//                                 <div id ="restaurant_info">
+//                                   <p>식당이름 : ${name}</p>
+//                                   <p>위치, 주소 : ${address}</p>
+//                                 </div>
+//                                 <div id="menu_list">
+//                                 </div>
+//                               </div>
+//                             </div>
+//                           </div>`;
+//           $("#food-board").append(temp_html);
+
+//           for (let j = 0; j < menu.length; j++) {
+//             let name_menu = menu[j][0];
+//             let price_menu = menu[j][1];
+//             console.log(menu);
+//             let list_html = `<p>${name_menu} : ${price_menu}</p>`;
+//             $("#menu_list").append(list_html);
+//           }
+//         }
+//       }
+//     },
+//   });
+// }
