@@ -1,0 +1,40 @@
+#total_box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  width: 720px;
+}
+
+.section {
+  background-color: #a2c48d;
+  border-radius: 20px;
+  max-width: 580px;
+  margin: auto;
+  margin-top: 60px;
+}
+.title {
+  font-weight: 800;
+  font-size: 5rem;
+}
+.title:hover {
+  cursor: pointer;
+}
+.subtitle {
+  font-size: 2rem;
+}
+.is-PricEat {
+  color: #a2c48d !important;
+}
+.button.is-PricEat {
+  background-color: #a2c48d;
+  border-color: transparent;
+  color: #fff !important;
+}
+.button.is-PricEat.is-outlined {
+  background-color: transparent;
+  border-color: #a2c48d;
+  color: #a2c48d !important;
+}
+.help {
+  color: gray;

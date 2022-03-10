@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PricEat</title>
+    <link rel="stylesheet" href="../static/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Myeongjo:wght@800&family=Poor+Story&display=swap"
+        rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script>
+        function sign_out() {
+            $.removeCookie('mytoken', { path: '/' })
+            alert('로그아웃')
+            window.location.href = '/login'
+        }
+        console.log(document.documentElement.clientWidth);
+    </script>
+    <script src="../static/js/main.js"></script>
+</head>
+
+<body class="body">
+    <div>
+        <div class="border">
+            <div class="main-login">
+                {% if member == null %}
+                <a class="login" href="/login">Login</a>
+                {% else %}
+                <span>{{ member['id'] }}님 환영합니다.</span>
+                <a class="logout" href="javascript:sign_out()">Logout</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <h2 class="title" onclick="location.href='/'"> <span class="jeonju">전주</span> 맛집을 찾아주는, PricEat! </h2>
+    <div class="input-box">
+        <div class="input-area">
+            <input id="area" class="area" type="text" placeholder="효자동" size="30" />
+        </div>
+        <div class="input-price">
+            <input id="price" class="price" type="text" placeholder="25000" size="30" />
+        </div>
+        <button type="submit" onclick="getInputValue()" class="btn">Search</button>
+    </div>
+
+    <div id="list_box">
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nanum Brush Script", cursive;
+  font-family: "Nanum Myeongjo", serif;
+  font-family: "Poor Story", cursive;
+}
+
+.body {
+  width: 100%;
+  height: 1280px;
+  margin: 0;
+  background-image: url("../img/food-photography-ga23fb2ab7_1920.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.insert {
+  margin-right: 20px;
+  margin-top: 5px;
+}
+
+.main-login {
+  display: flex;
+  justify-content: right;
+  margin-right: 40px;
+  color: rgb(0, 0, 0);
+}
+
+.login {
+  font-size: 25px;
+  color: black;
+  text-decoration: none;
+  margin-right: 30px;
+  cursor: pointer;
+  font-weight: lighter;
+  transition: transform 300ms ease-in;
+}
+
+.login:hover {
+  color: rgb(99, 149, 66);
+  transform: scale(1.2);
+}
+
+.logout {
+  font-size: 25px;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: lighter;
+  transition: transform 250ms ease-in;
+}
+
+.logout:hover {
+  color: rgb(99, 149, 66);
+  transform: scale(1.2);
+}
+
+.title {
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-weight: normal;
+  padding: 0;
+  margin-top: 80px;
+}
+
+.title:hover {
+  cursor: pointer;
+}
+
+.input-box {
+  max-width: 950px;
+  min-width: 450px;
+  margin: auto;
+  margin-top: 80px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 60px;
+  margin-bottom: 80px;
+}
+
+.area {
+  width: 100%;
+  box-shadow: none;
+  outline: 0;
+  font-size: 30px;
+  border: none;
+  margin-left: 60px;
+}
+
+.input-price {
+  position: relative;
+}
+
+.input-price::after {
+  position: absolute;
+  top: 1px;
+  width: 1px;
+  height: 40px;
+  content: "";
+  background-color: rgb(131, 131, 131);
+}
+
+.price {
+  width: 100%;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  outline: 0;
+  font-size: 30px;
+  margin-left: 10px;
+}
+
+.btn {
+  margin-left: auto;
+  margin-right: 20px;
+  background-color: rgb(99, 149, 66);
+  border: 1px solid rgb(99, 149, 66);
+  border-radius: 60px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont,
+    sans-serif;
+
+  font-size: 40px;
+  outline: none;
+  outline: 0;
+  padding: 10px 15px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .btn {
+    padding: 10px 30px;
+  }
+}
+
+.border {
+  background-color: rgb(255, 255, 255);
+  margin-right: 50px;
+  margin-left: 50px;
+  opacity: 0.6;
+  padding: 20px;
+  font-size: large;
+}
+
+#list_box {
+  max-width: 885px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.desc_list {
+  border-radius: 10%;
+  width: 240px;
+  height: 250px;
+  background-color: aliceblue;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.desc_list:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 30px rgb(0, 0, 0);
+}
+
+.store_img {
+  border-radius: 10%;
+  max-width: 220px;
+  height: 180px;
+  margin-left: 10px;
+  margin-top: 10px;
+  /* background-image: url(../img/예시.jpg); */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.store_name {
+  /* border: 1px solid; */
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  line-height: 60px;
+  font-size: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  align-items: center;
+}
+
+.jeonju {
+  color: rgb(113, 156, 85);
+  font-size: 100px;
+  font-weight: bold;
+}

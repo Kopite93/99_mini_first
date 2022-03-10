@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../static/css/detail.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Myeongjo:wght@800&family=Poor+Story&display=swap"
+    rel="stylesheet" />
+  <title>DetailPage</title>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+  <h2 class="title" onclick="location.href='/'">Restaurant Info🍚</h2>
+  <section id="food-board" class="section1">
+    <!-- <div class="main-list">
+      <div class="img"
+        style="background-image: url('https://openapi.jeonju.go.kr/foodstay_img/shop/vUiMNqTr5eMz6Y0HUxVf9rnF/MF_DNzUbGFbK8EHMmFusm5RHxG9.jpg');">
+      </div>
+      <div class="restaurant-menu">
+        <div class="detail-info">
+          <div id ="restaurant_info">
+          <p>식당이름 : ${name}</p>
+          <p>위치, 주소 : ${address}</p>
+          </div>
+          <div id="menu_list">
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </section>
+  <section class="section2">
+    <div class="review-input">
+      <input id="input-content" class="inp" type="text" size="83" placeholder="리뷰를 남겨보세요" />
+      <button id="review-btn" class="btn" onclick="review()">의견남기기❤️</button>
+    </div>
+  </section>
+  <section id="review" class="section3">
+  </section>
+  <script src="../static/js/detail.js"></script>
+
+</body>
+
+</html>

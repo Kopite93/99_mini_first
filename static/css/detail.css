@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nanum Brush Script", cursive;
+  font-family: "Nanum Myeongjo", serif;
+  font-family: "Poor Story", cursive;
+}
+
+body {
+  background-color: #ffe08c;
+}
+
+.section1 {
+  padding: 60px;
+  margin-left: 250px;
+}
+
+.section2 {
+  margin: auto;
+  width: 800px;
+}
+
+.review-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inp {
+  outline: none;
+  border: none;
+  padding: 10px;
+}
+
+.btn {
+  border: none;
+  margin-left: 5px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+}
+
+.btn:hover {
+  background-color: #3d2e29;
+  color: white;
+}
+
+.title {
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: normal;
+  padding: 0;
+  width: 250px;
+  margin: auto;
+  margin-top: 80px;
+}
+
+title:hover {
+  color: white;
+}
+
+.border {
+  background-color: rgb(255, 255, 255);
+  margin-right: 50px;
+  margin-left: 50px;
+  opacity: 0.6;
+}
+
+.main-list {
+  display: flex;
+  justify-content: center;
+  width: 920px;
+  height: 600px;
+  margin: auto;
+}
+
+.img {
+  border-radius: 10%;
+  margin: 20px;
+  width: 1500px;
+  height: 560px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.detail-info {
+  height: 560px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+#restaurant_info {
+  width: 350px;
+  color: #3d2e29;
+  margin-top: 60px;
+  font-size: 14px;
+  height: 90px;
+  font-weight: bold;
+}
+
+#menu_list {
+  margin-top: 0;
+  height: 450px;
+  overflow: scroll;
+}
+
+#menu_list::-webkit-scrollbar {
+  width: 0px;
+}
+
+.restaurant-menu {
+  width: 800px;
+  height: 330px;
+}
+
+.menu-info {
+  background-color: rgb(255, 255, 255);
+  padding: 70px;
+  margin-left: 20px;
+  margin-top: 45px;
+}
+
+.section3 {
+  margin: auto;
+  width: 800px;
+  height: 265px;
+  margin-top: 20px;
+  padding: 50px;
+}
+
+.review-box div + div {
+  margin-top: 10px;
+}
+
+.review-content {
+  background-color: #ffffff;
+  color: #3d2e29;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: left;
+  margin-bottom: 20px;
+}
+
+.red {
+  max-width: 70%;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(255, 240, 240);
+  background-color: #84a172;
+}
